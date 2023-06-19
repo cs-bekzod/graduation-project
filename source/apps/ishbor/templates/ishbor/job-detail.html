@@ -1,0 +1,124 @@
+{% extends 'ishbor/layouts/base.html' %} {% load static %}
+
+<head>
+    {% block meta %} {% endblock %}
+</head>
+
+{% block content %}
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Header End -->
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">Ish haqida batafsil</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="/home">Bosh Sahifa</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Batafsil</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Job Detail Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row gy-5 gx-4">
+                    <div class="col-lg-8">
+                        <div class="d-flex align-items-center mb-5">
+                            <img class="flex-shrink-0 img-fluid border rounded" src="/media/{{job.image}}" alt="" style="width: 80px; height: 80px;">
+                            <div class="text-start ps-4">
+                                <h3 class="mb-3">{{ job.title }}</h3>
+                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ job.locations }}</span>
+                                <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>{{ job.job_type }}</span>
+                                <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>${{ job.salary }}</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <h4 class="mb-3">Ish haqida batafsil</h4>
+                            <p>Biz kompaniyamizga mijozlarimizga o'z vaqtida va mukammal kod sifati bilan qiymat yetkazib berishga yordam beradigan Middle yoki Senior Python dasturchisini qidirmoqdamiz.
+                                Biz 700 dan ortiq xodimga ega IT kompaniyasimiz. Bizning Uzbekistonda ScienceSoft shtab-kvartiramiz va Yevropa va BAAda bir nechta ofislarimiz bor. Biz IT-biznesda 34 yildan beri ishlaymiz va rivojlanishda davom etamiz.  
+                                Sizga ajoyib, qiyin va qiziqarli loyihalarda ishtirok etishni taklif qilamiz. Jamoamizning yondashuvi va vakolatlari haqida bilish va potentsial loyihalar haqida tasavvurga ega bo'lish uchun dasturiy ta'minotni ishlab chiqish bo'yicha xizmat sahifamizga tashrif buyuring.</p>
+                            <h4 class="mb-3">Sizning vazifangiz</h4>
+                            <p>Biz ishlab chiqayotgan platforma to'g'ridan-to'g'ri treyderlar uchun emas, balki birinchi navbatda risk menejerlari, moliyaviy nazoratchilar va tartibga soluvchi organlarga xizmat qiladi. Uning asosiy vazifasi xavfni aniq, o'z vaqtida va ishonchli o'lchash va baholashni ta'minlashdan iborat.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Risklarni hisoblashni ishlab chiqish</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Python yordamida yangi xavflarni hisoblash usullarini loyihalash, ishlab chiqish va joriy etish</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Tizimni yaxshilash, takomillashtirish </li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Innovatsion echimlarni joriy etish orqali mavjud xavf tizimini yaxshilash</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Murakkab moliyaviy vositalar va xavf stsenariylarini modellashtirish uchun miqdoriy ko'nikmalarni qo'llash</li>
+                            </ul>
+                            <h4 class="mb-3">Talab etiladigan bilimlar</h4>
+                            <p>Python dasturlash bo'yicha Senior tajriba (5+ yil), shu jumladan ma'lumotlar tuzilmalari, algoritmlar va dasturiy ta'minotni loyihalash tamoyillarini yaxshi tushunish.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Kuchli matematik bilim, yaxshisi miqdoriy moliya, statistika yoki tegishli sohaga e'tibor qaratish.</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Agile ishlab chiqish muhitida ishlash tajribasi.</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Kompyuter fanlari yoki tegishli sohada bakalavr darajasiga afzallik beriladi.</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Python frameworklaridan birini yaxshi bilish (Django, Flask...)</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Pyspark, Pytorch, Pandas</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>Java asoslarini tushunish</li>
+                                <li><i class="fa fa-angle-right text-primary me-2"></i>HTML, CSS, Javascript, JQuery asoslarini bilishi</li>
+                            </ul>
+                        </div>
+        
+                        <div class="">
+                            <h4 class="mb-4">Ishga topshirish</h4>
+                            <p>Forma ish beruvchining elektron pochtasiga yuboriladi.</p>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Ismingiz" required>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="email" class="form-control" placeholder="Email" required>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Portfolio linki" required>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="file" class="form-control bg-white" required> 
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control" rows="5" placeholder="Qo'shimcha xabar yozishingiz mumkin..."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100" type="submit">Jo'natish</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-4">
+                        <div class="bg-light rounded p-5 mb-4 wow slideInUp">
+                            <h4 class="mb-4">Ma'lumotlar</h4>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Yuklangan sana: {{ job.created_at |date:" d.m.Y, P"}}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Yo'nalish: {{ job.title }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Ish turi: {{ job.job_type }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Oylik: ${{ job.salary }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Joylashuv: {{ job.locations }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Telefon: {{ job.phone }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Email: {{ job.email }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Telegram: {{ job.tg_username }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>LinkedIn: {{ job.linkedin }}</p>
+
+                        </div>
+                        <div class="bg-light rounded p-5 wow slideInUp">
+                            <h4 class="mb-4">Kompaniya haqida</h4>
+                            <p class="m-0">Google LLC - sun'iy intellekt, onlayn reklama, qidiruv tizimi texnologiyasi, bulutli hisoblash, kompyuter dasturlari, kvant hisoblashlari, elektron tijorat va maishiy elektronika sohalariga yo'naltirilgan Amerika ko'p millatli texnologiya kompaniyasi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Job Detail End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+</body>
+{% endblock %}

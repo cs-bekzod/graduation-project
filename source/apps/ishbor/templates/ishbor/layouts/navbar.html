@@ -1,0 +1,37 @@
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="/home" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+        <h1 class="m-0 text-primary">IshBor.com</h1>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0" id="myDIV">
+            <a href="/home" class="nav-item nav-link">Bosh sahifa</a>
+            <a href="/jobs" class="nav-item nav-link">Ish o'rinlari</a>
+            <a href="/candidates" class="nav-item nav-link">Xodimlar</a>
+            <a href="/ranking" class="nav-item nav-link">Reyting</a>
+            <a href="/events" class="nav-item nav-link">Tadbirlar</a>
+            <a href="/about" class="nav-item nav-link">Biz haqimizda</a>
+            <a href="/contact" class="nav-item nav-link">Aloqa</a>
+        </div>
+        <a href="/accounts/auth/login" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Kirish<i class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+<script>
+    
+    let myDiv = document.getElementById("myDIV")
+    for(let i=0; i<myDiv.children.length; i++) {
+        if(!myDiv.children[i].className.includes('active') && window.location.href.includes(myDiv.children[i].attributes[0].nodeValue)) {
+            myDiv.children[i].classList.add("active")
+        } else {
+            myDiv.children[i].classList.remove("active")
+        }
+    }
+</script>
+
+
+

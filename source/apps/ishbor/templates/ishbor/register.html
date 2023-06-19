@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IshBor.com</title>
+  <link rel="stylesheet" href="{% static 'ishbor/css/register.css' %}">
+</head>
+<body>
+<h2>IshBor.com, o'z karyerangni biz bilan boshla!</h2>
+<div class="container" id="container" >
+	<div class="form-container sign-in-container">
+		<form action="#" method="POST">
+		    {% csrf_token %}
+			<h1>Profil yaratish</h1>
+			{{ RegisterForm.full_name }}
+			{{ RegisterForm.username }}
+			{{ RegisterForm.password }}
+			<p>Foydalanuvchi turini tanlang:</p>
+			{{ RegisterForm.user_types }}
+			<button>yaratish</button>
+			<a href="/accounts/auth/login">Allaqachon akkauntingiz bormi? Login</a>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-right">
+				<h1>Xush kelibsiz!</h1>
+				<p>Profilingiz yo'qmi? Unda hoziroq profilingizni yarating va karyerangizni biz bilan boshlang!</p>
+				<button class="ghost">Bosh sahifaga qaytish</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="{% static 'ishbor/js/register.js' %}"></script>
+</body>

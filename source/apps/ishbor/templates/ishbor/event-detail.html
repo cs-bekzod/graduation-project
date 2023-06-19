@@ -1,0 +1,88 @@
+{% extends 'ishbor/layouts/base.html' %} {% load static %}
+
+<head>
+    {% block meta %} {% endblock %}
+</head>
+
+{% block content %}
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Header End -->
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
+            <div class="container my-5 pt-5 pb-4">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">{{event.title}}</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="/home">Bosh Sahifa</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Batafsil</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Event Detail Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row gy-5 gx-4">
+                    <div class="col-lg-8">
+                        <div class="d-flex align-items-center mb-5">
+                            <img class="flex-shrink-0 img-fluid border rounded" src="/media/{{event.image}}" alt="" style="width: 80px; height: 80px;">
+                            <div class="text-start ps-4">
+                                <h3 class="mb-3">{{ event.title }}</h3>
+                                <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ event.locations }}</span>
+                                <span class="text-truncate me-3"><i class="far fa-money-bill-alt text-primary me-2"></i>{{ event.price }}</span>
+                                <span class="text-truncate me-0"><i class="far fa-user text-primary me-2"></i>{{ event.count }}</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <h4 class="mb-3">Batafsil ma'lumot</h4>
+                            <p>Google Dasturchilar Guruhi(GDG) har yili ajoyib insonlarni bir joyga jamlaydigan festival o'tkazadi.Yilning shu vaqtiga yetib keldik! 26-noyabr kuni Toshkentda, Yangi O'zbekiston Universitetida ham ushbu festival bo'lib o'tadi. Festival davomida yangi bilimlar olishingiz, ajoyib insonlar bilan tanishish va ko'plab imkoniyatlarga ega bo'lasiz!</p>
+                            <h4 class="mb-3">Google I/O Extended</h4>
+                            <p>Google I/O Extended — Google I/O ning hamjamiyat boshchiligidagi hamkasbi boʻlib, bizning yillik Google konferentsiyasi boʻlib, unda dunyo Googlening eng soʻnggi ishlab chiquvchi yechimlari, mahsulotlari va texnologiyasi haqida eshitiladi.
+
+Google I/O Extended — har yili butun dunyo boʻylab shahar darajasidagi dasturchilarga Google I/O haqidagi bilim va hayajonni yetkazadigan hamjamiyat boshchiligidagi bir qator texnologik uchrashuvlar.
+
+Google I/O Extended Google Developer Groups tadbirlari seriyasi boʻlsa-da, biz Google Developer Student Clubs (GDSC) va Women Techmakers (WTM)ni ishtirok etishga taklif qilamiz. Mavsum davomida kengaytirilgan uchrashuvlar. Quyida batafsil ma'lumot oling.</p>
+<h4 class="mb-3">GDG Tashkent</h4>
+<p>Google I/O Extended — Google I/O ning hamjamiyat boshchiligidagi hamkasbi boʻlib, bizning yillik Google konferentsiyasi boʻlib, unda dunyo Googlening eng soʻnggi ishlab chiquvchi yechimlari, mahsulotlari va texnologiyasi haqida eshitiladi.
+
+Google I/O Extended — har yili butun dunyo boʻylab shahar darajasidagi dasturchilarga Google I/O haqidagi bilim va hayajonni yetkazadigan hamjamiyat boshchiligidagi bir qator texnologik uchrashuvlar.
+
+Google I/O Extended Google Developer Groups tadbirlari seriyasi boʻlsa-da, biz Google Developer Student Clubs (GDSC) va Women Techmakers (WTM)ni ishtirok etishga taklif qilamiz. Mavsum davomida kengaytirilgan uchrashuvlar. Quyida batafsil ma'lumot oling.</p>
+<h4 class="mb-3">Google LLC</h4>
+<p>Google I/O Extended — Google I/O ning hamjamiyat boshchiligidagi hamkasbi boʻlib, bizning yillik Google konferentsiyasi boʻlib, unda dunyo Googlening eng soʻnggi ishlab chiquvchi yechimlari, mahsulotlari va texnologiyasi haqida eshitiladi.
+
+Google I/O Extended — har yili butun dunyo boʻylab shahar darajasidagi dasturchilarga Google I/O haqidagi bilim va hayajonni yetkazadigan hamjamiyat boshchiligidagi bir qator texnologik uchrashuvlar.
+
+Google I/O Extended Google Developer Groups tadbirlari seriyasi boʻlsa-da, biz Google Developer Student Clubs (GDSC) va Women Techmakers (WTM)ni ishtirok etishga taklif qilamiz. Mavsum davomida kengaytirilgan uchrashuvlar. Quyida batafsil ma'lumot oling.</p>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-4">
+                        <div class="bg-light rounded p-5 mb-4 wow slideInUp">
+                            <h4 class="mb-4">Ma'lumotlar</h4>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Boshlanish sanasi: {{ event.start_time |date:" d.m.Y, P"}}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Mavzu: {{ event.title }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Kirish narxi: {{ event.price }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Joylar soni: {{ event.count }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Joylashuv: {{ event.locations }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Telefon: {{ event.phone }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Email: {{ event.email }}</p>
+                            <p><i class="fa fa-angle-right text-primary me-2"></i>Yuklangan sana: {{ event.created_at |date:" d.m.Y, P"}}</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Event Detail End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+</body>
+{% endblock %}
